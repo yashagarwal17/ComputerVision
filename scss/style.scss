@@ -1,0 +1,942 @@
+/*!==============================
+ * Theme Name: Virb
+ * Theme URL: https://probootstrap.com/virb-free-html5-multi-purpose-website-template
+ * Version: 1.0
+ * Author: ProBootstrap.com
+ * Author URL: https://probootstrap.com
+ * License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
+ */
+@import 'custom-settings';
+
+html {
+	overflow-x: hidden;
+	font-size: 1em;
+}
+body {
+	background: $brand-white;
+	font-size: 16px;
+	font-family: $font-primary;
+  line-height: 1.8;
+  color: rgba(0,0,0,.5);
+}
+// selection
+::selection {
+  background: $brand-black; 
+  color: $brand-white;
+}
+::-moz-selection {
+  background: $brand-black; 
+  color: $brand-white;
+}
+// Typography
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  line-height: 1.2;
+  color: $brand-black;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.602em;
+}
+
+h2 {font-size: 1.424em;}
+
+h3 {font-size: 1.266em;}
+
+h4 {font-size: 1.125em;}
+
+small, .font_small {font-size: 0.889em;}
+
+p, ul, ol, figure {
+	margin-bottom: 1.3em;
+}
+
+a {
+	transition: .3s all;
+	color: $brand-primary;
+	&:hover, &:focus {
+		color: $brand-primary;
+		text-decoration: underline;
+	}
+	&.hover-reverse {
+		color: $brand-white;
+			&:hover, &:focus, &:active {
+			color: $brand-primary;
+			text-decoration: none;
+		}
+	}
+}
+
+.probootstrap-header {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+	z-index: 12;
+	position: absolute;
+	top: 0;
+}
+
+
+
+.probootstrap-logo {
+	float: left;
+	color: $brand-white;
+	padding-left: 0px;
+	font-size: 30px;
+	display: block;
+	font-weight: 100;
+	font-family: $font-primary;
+	&:hover, &:focus, &:active {
+		color: $brand-white;
+		text-decoration: none;
+	}
+	@media screen and (max-width: $screen-sm) {
+		padding-left: 0px;
+	}
+}
+.probootstrap-nav {
+	margin-left: 60px;
+	margin-top: 12px;
+	text-align: left;
+	float: RIGHT;
+	position: relative;
+	.probootstrap-mobile-menu-active & {
+		margin-top: 0px;
+		text-align: left;
+		position: fixed;
+		display: block!important;
+		overflow-y: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding-right: 0;
+		z-index: 1100;
+		height: 100vh;
+		width: 300px;
+		background: $brand-black;
+		padding: 40px;
+		transition: .3s all ease-out;
+		transform: translateX(300px);
+	}
+	.extra-text {
+		.probootstrap-mobile-menu-active & {
+			display: block;
+			float: left;
+			clear: both;
+			margin-top: 30px;
+			color: #222;
+			.social-buttons {
+				padding: 0;
+				margin: 0 0 20px 0;
+				li {
+					@include inline-block;
+					padding: 0;
+					margin: 0;
+					a {
+						color: $brand-white;
+						padding: 10px;
+					}
+					&:first-child {
+						a {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+			h5 {
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: bold;
+				letter-spacing: .1em;
+				color: rgba(0,0,0,.5);
+			}
+		}
+	}
+	.probootstrap-mobile-menu-active.show & {
+		transform: translateX(0px);
+	}
+}
+
+// main simple nav
+.probootstrap-main-nav {
+	margin: 0;
+	padding: 0;
+	.probootstrap-mobile-menu-active & {
+		float: left;
+		margin-top: 40px;
+		width: 100%;
+	}
+	li {
+		margin: 0;
+		padding: 0 10px;
+		list-style: none;
+		display: inline;
+		font-size: 18px;
+		.probootstrap-mobile-menu-active & {
+			margin-bottom: 10px;
+			display: block;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		a {
+			font-weight: 400;
+			padding: 10px 0;
+			color: rgba(0,0,0,.7);
+			font-size: 16px;
+			text-decoration: none;
+			&:hover {
+				color: $brand-black;
+			}
+			.probootstrap-mobile-menu-active.show & {
+				color: $brand-white;
+			}
+			.probootstrap-mobile-menu-active & {
+				margin-bottom: 10px;
+				padding: 5px 0;
+				display: block;
+			}
+			.probootstrap-mobile-menu-active & {
+				border-bottom: none!important;
+				&:hover {
+					color: #222;	
+				}
+			}
+		}
+		&.probootstrap-cta {
+			margin-left: 20px;
+			a {
+				border: 2px solid $brand-white;
+				padding-right: 20px;
+				padding-left: 20px;
+				border-radius: 4px;
+				&:hover {
+					background: $brand-white;
+					color: $brand-primary;
+				}
+			}
+			.probootstrap-mobile-menu-active & {
+				margin-left: 0px;
+				margin-top: 20px;
+				a {
+					padding-top: 2px;
+					padding-bottom: 2px;
+				}
+			}
+		}
+		&.active {
+			a {
+				color: $brand-primary;
+				&:hover {
+					color: $brand-black;
+				}
+				.probootstrap-mobile-menu-active & {
+					
+					color: $brand-primary;
+				}
+			}
+		}
+	}
+	.probootstrap-mobile-menu-active & {
+		li {
+			display: block;
+		}
+	}
+}
+
+// active mobile show. Overlay content.
+.mobile-menu-overlay {
+	z-index: 1099;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,.7);
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s all ease-out;
+}
+.probootstrap-mobile-menu-active.show {
+	.mobile-menu-overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.probootstrap-right-nav {
+	position: absolute; 
+	top: 3px; 
+	right: 0;
+	margin: 0;
+	padding: 0;
+	text-align: right!important;
+	li {
+		padding: 0;
+		margin: 0;
+		@include inline-block;
+		list-style: none;
+		a {
+			padding: 0 10px;
+			color: $brand-white;
+			&:hover {
+				text-decoration: none!important;
+				color: $brand-primary;
+			}
+		}
+	}
+}
+
+// burger
+.probootstrap-burger-menu {
+  display: inline-block;
+  width:18px;
+  height:18px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  i {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    color: $brand-black;
+    font:bold 14px/.4 Helvetica, arial;
+    text-transform: uppercase;
+    text-indent:-55px;
+    background: $brand-black;
+    transition:all .2s ease-out;
+    &::before, &::after {
+      content:'';
+      width: 18px;
+      height: 2px;
+      background: $brand-black;
+      position: absolute;
+      left:0;
+      transition: all .2s ease-out;
+    }
+    &::before {
+      top: -7px;
+    }
+    &::after {
+      bottom: -7px;
+    }
+  }
+  &:hover {
+    i {
+      &::before {
+        top: -10px;
+      }
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+  &.active {
+
+    i {
+      // background: #fff;
+      background: transparent;
+      &::before {
+        top:0;
+        -webkit-transform: rotateZ(45deg);
+           -moz-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+             -o-transform: rotateZ(45deg);
+                transform: rotateZ(45deg);
+      }
+      &::after {
+        bottom:0;
+        -webkit-transform: rotateZ(-45deg);
+           -moz-transform: rotateZ(-45deg);
+            -ms-transform: rotateZ(-45deg);
+             -o-transform: rotateZ(-45deg);
+                transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
+.probootstrap-mobile-menu-active.show {
+	.probootstrap-burger-menu {
+	  i {
+	    color: $brand-white;
+	    background: $brand-black;
+	    &::before, &::after {
+	      background: $brand-white;
+	    }
+	  }
+	}
+}
+.probootstrap-burger-menu {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+// btn
+.btn {
+	border: none;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	transition: .3s all ease-in;
+	&:focus, &:active {
+		box-shadow: none;
+	}
+	&.btn-sm {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 13px;
+	}
+	&.btn-lg {
+		line-height: 1.5;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	&.btn-primary {
+		border: 2px solid $brand-primary;
+		background: $brand-primary;
+		color: $brand-white;
+		&:hover, &:active, &:focus {
+			background: lighten($brand-primary, 5%);
+			color: $brand-white;
+			border: 2px solid lighten($brand-primary, 5%);
+		}
+		&:focus, &:active {
+			outline: none;
+			border: 2px solid lighten($brand-primary, 5%);
+		}
+		
+	}
+	&.btn-ghost {
+		background: transparent;
+		border: 2px solid $brand-primary;
+		color: $brand-primary;
+		&:hover {
+			background: $brand-primary;
+			color: $brand-white;
+			border: 2px solid $brand-primary;
+		}
+		&:focus, &:active {
+			outline: none;
+			background: transparent;
+			color: $brand-primary;
+			border: 2px solid $brand-primary;
+		}
+		&.btn-ghost-white {
+			background: transparent;
+			border: 2px solid $brand-white;
+			color: $brand-white;
+			&:hover {
+				background: $brand-white;
+				color: $brand-primary;
+			}
+			&:focus, &:active {
+				outline: none;
+				background: $brand-white;
+				color: $brand-primary;
+				border: 2px solid $brand-white;
+			}
+		}
+	}
+	&.btn-black {
+		background: $brand-black;
+		color: $brand-white;
+		border: 1px solid $brand-black;
+		&:hover {
+			background: $brand-black;
+			color: $brand-white;
+			border: 1px solid $brand-black;
+		}
+		&:focus, &:active {
+			outline: none;
+			background: $brand-black;
+			color: $brand-white;
+			border: 1px solid $brand-black;
+		}
+	}
+}
+
+
+// section
+
+.probootstrap-section {
+	position: relative;
+	padding: 10em 0;
+	@media screen and (max-width: $screen-sm) {
+		padding: 5em 0;
+	}
+}
+.probootstrap-main {
+	position: relative;
+	margin-bottom: 300px;
+	background: $brand-white;
+	z-index: 2;
+	@media screen and (max-width: $screen-sm) {
+		margin-bottom: 0;
+	}
+}
+.probootstrap-footer {
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	height: 300px;
+	background: #F1F6F8;
+	width: 100%;
+	left: 0;
+	padding-top: 100px;
+	text-align: center;
+	@media screen and (max-width: $screen-sm) {
+		position: relative;
+		height: inherit;
+		padding: 7em 0;
+	}
+}
+
+
+// flex
+.flex {
+	display: flex;
+  flex-flow: row wrap;
+}
+.probootstrap-section-half {
+	@extend .flex;
+	&:last-child {
+		.probootstrap-text { 
+			border-bottom: none;
+		}
+	}
+	.probootstrap-image, .probootstrap-text {
+		height: 100vh;
+		width: 50%;
+		transition: .3s all ease;
+		@media screen and (max-width: $screen-sm) {
+			height: inherit;
+			padding: 2em 0;
+			width: 100%;
+		}
+	}
+	.probootstrap-image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media screen and (max-width: $screen-sm) {
+			height: 400px;
+			padding: 0;
+		}
+	}
+	.probootstrap-text {
+		border-bottom: 1px solid lighten($brand-black, 95%);
+		
+		@extend .flex;
+  	justify-content: center;
+  	> .probootstrap-inner {
+  		align-self: center;
+  		max-width: 500px;
+  		padding: 30px;
+  	}
+	}
+	&:hover, &:focus {
+		.probootstrap-image {
+			width: 48%;
+			@media screen and (max-width: $screen-sm) {
+				width: 100%;
+			}
+		}
+		.probootstrap-text {
+			width: 52%;
+			@media screen and (max-width: $screen-sm) {
+				width: 100%;
+			}
+		}
+	}
+	&.probootstrap-reverse {
+		.probootstrap-image {
+			order: 2;
+			@media screen and (max-width: $screen-sm) {
+				order: 1;
+			}
+		}
+		.probootstrap-text {
+			order: 1;
+			@media screen and (max-width: $screen-sm) {
+				order: 2;
+			}
+		}
+	}
+	&.probootstrap-no-hover {
+		.probootstrap-image, .probootstrap-text {
+			width: 50%!important;
+			@media screen and (max-width: $screen-sm) {
+				width: 100%!important;
+			}
+		}
+	}
+}
+
+
+.service {
+	margin-bottom: 50px;
+	.icon {
+		font-size: 60px;
+		i {
+			color: $brand-primary;
+		}
+	}
+}
+// animate
+.probootstrap-animate {
+	opacity: 0;
+	visibility: hidden;
+}
+
+// form
+.probootstrap-form {
+	margin-bottom: 50px;
+	&.probootstrap-form-box {
+		background: $brand-white;
+		padding: 30px;
+		-webkit-box-shadow: 18px 17px 104px -24px rgba(0,0,0,0.1);
+		-moz-box-shadow: 18px 17px 104px -24px rgba(0,0,0,0.1);
+		box-shadow: 18px 17px 104px -24px rgba(0,0,0,0.1);
+		@media screen and (max-width: $screen-sm) {
+			padding: 20px;
+		}
+	}
+	.form-note-link {
+		font-weight: 400;
+		a {
+			color: rgba(0,0,0,.4);
+			&:hover, &:active, &:focus {
+				color: rgba(0,0,0,.4);
+			}
+		}
+	}
+	label {
+		font-weight: normal;
+	}	
+	.form-control {
+		height: 46px;
+		box-shadow: none;
+		font-size: 16px;
+		appearance: none;
+		border-radius: 4px;
+		border: 2px solid rgba(0,0,0,.1);
+		background: none;
+		color: $brand-black;
+		transition: .3s all ease-out;
+		&:active, &:focus {
+			box-shadow: none;
+			border-color: $brand-primary;
+			
+		}
+	}
+	textarea.form-control {
+		height: inherit;
+		resize:vertical; 
+	}
+}
+
+.probootstrap-social {
+	padding: 0;
+	margin: 0;
+	li {
+		display: inline;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		a {
+			padding: 10px;
+			font-size: 22px;
+			&:hover {
+				text-decoration: none!important;
+			}
+		}
+		&:first-child {
+			> a {
+				padding-left: 0;	
+			}
+			
+		}
+	}
+}
+
+
+
+
+// magnific popup
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out; 
+  -moz-transition: all 0.15s ease-out; 
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out; 
+  -moz-transition: all 0.15s ease-out; 
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+.image-link {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+
+/* This block of CSS adds opacity transition to background */
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+/* aligns caption to center */
+.mfp-title {
+  text-align: center;
+  padding: 6px 0;
+}
+.image-source-link {
+  color: #DDD;
+}
+
+
+
+
+// Helper
+.probootstrap-gutter0 {
+	> div[class*='col-'] {
+		padding-right: 0px;
+		padding-left: 0px;
+		@media screen and (max-width: $screen-xs) {
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+	}
+}
+
+.probootstrap-gutter10 {
+	> div[class*='col-'] {
+		padding-right: 5px;
+		padding-left: 5px;
+		@media screen and (max-width: $screen-xs) {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}
+}
+.probootstrap-gutter40 {
+	> div[class*='col-'] {
+		padding-right: 20px;
+		padding-left: 20px;
+		@media screen and (max-width: $screen-xs) {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+}
+.probootstrap-gutter60 {
+	> div[class*='col-'] {
+		padding-right: 30px;
+		padding-left: 30px;
+		@media screen and (max-width: $screen-xs) {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+}
+.mb0 {
+	margin-bottom: 0px!important;
+}
+.mb10 {
+	margin-bottom: 10px!important;
+}
+.mb20 {
+	margin-bottom: 20px!important;
+}
+.mb30 {
+	margin-bottom: 30px!important;
+}
+.mb40 {
+	margin-bottom: 40px!important;
+}
+.mb50 {
+	margin-bottom: 50px!important;
+}
+.mb60 {
+	margin-bottom: 60px!important;
+}
+.mb70 {
+	margin-bottom: 70px!important;
+}
+.mb80 {
+	margin-bottom: 80px!important;
+}
+.mb90 {
+	margin-bottom: 90px!important;
+}
+.mb100 {
+	margin-bottom: 100px!important;
+}
+.mt0 {
+	margin-top: 0px!important;
+}
+.mt10 {
+	margin-top: 10px!important;
+}
+.mt20 {
+	margin-top: 20px!important;
+}
+.mt30 {
+	margin-top: 30px!important;
+}
+.mt40 {
+	margin-top: 40px!important;
+}
+.mt50 {
+	margin-top: 50px!important;
+}
+.mt60 {
+	margin-top: 60px!important;
+}
+.mt70 {
+	margin-top: 70px!important;
+}
+.mt80 {
+	margin-top: 80px!important;
+}
+.mt90 {
+	margin-top: 90px!important;
+}
+.mt100 {
+	margin-top: 100px!important;
+}
+.pb0 {
+	padding-bottom: 0!important;
+}
+.probootstrap-black-color {
+	color: $brand-black!important;
+}
+.probootstrap-white-color {
+	color: $brand-white!important;
+}
+.probootstrap-primary-color {
+	color: $brand-primary!important;
+}
+.probootstrap-secondary-color {
+	color: $brand-secondary!important;
+}
+.img-sm-responsive {
+	@media screen and (max-width: $screen-sm) {
+		max-width: 100%;
+	}
+}
+.img-xs-responsive {
+	@media screen and (max-width: $screen-sm) {
+		max-width: 100%;
+	}
+}
+.col-xxs-12 {
+	@media screen and (max-width: 480px) {
+		float: none;
+		width: 100%;
+	}
+}
+
+// preloader
+.probootstrap-loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	background: $brand-white url(../img/preloader.gif) center no-repeat;
+}
+
+// go to top
+.gototop {
+	position: fixed;
+	bottom: -20px;
+	right: 20px;
+	z-index: 9999999;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s all;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		bottom: 20px;
+	}
+	a {
+		width: 50px;
+		height: 50px;
+		display: table;
+		background: rgba(0,0,0,.5);
+		color: $brand-white;
+		text-align: center;	
+		border-radius: 4px;
+		i {
+			height: 50px;
+			display: table-cell;
+			vertical-align: middle;
+
+		}
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+			outline: none;
+			background: rgba(0,0,0,.9);
+		}
+	}	
+}
