@@ -19,6 +19,8 @@
 // import * as posenet from '../src';
 
 // import { drawKeypoints, drawSkeleton } from './demo_util';
+function startVideo()
+{
 const maxVideoSize = 513;
 const canvasSize = 400;
 const stats = new Stats();
@@ -323,3 +325,4 @@ navigator.getUserMedia = navigator.getUserMedia ||
   navigator.webkitGetUserMedia ||
   navigator.mozGetUserMedia;
 bindPage(); // kick off the demo
+}
