@@ -68,6 +68,27 @@ function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
   }
 }
 
+function estimate(keypoints, minConfidence, ctx, scale = 1) {
+  for (let i = 0; i < keypoints.length; i++) {
+    const keypoint1 = keypoints[1];
+    const keypoint2 = keypoints[2];
+
+    if (keypoint1.score < minConfidence) {
+      continue;
+    }
+
+    const [y1,x1] = toTuple(keypoint1.position);
+    const [y2,x2] = toTuple(keypoint2.position);
+	if(y1>y2){
+    document.getElementById("box").style.background = 'green';
+	}
+	else
+	{
+	document.getElementById("box").style.background = 'red';
+	}
+  }
+}
+
 /**
  * Draw the bounding box of a pose. For example, for a whole person standing
  * in an image, the bounding box will begin at the nose and extend to one of

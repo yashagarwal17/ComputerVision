@@ -58,9 +58,7 @@
     <!-- END section -->
     <section class="probootstrap-section-half probootstrap-reverse">
 	<div class="container"><h1 class="heading">Skeletal</h1></div>
-       <div id="loading">
-        Click on start button...
-       </div>
+
 
     <div id='main' style='display:none;padding:50px;'>
         <video id="video" playsinline style=" -moz-transform: scaleX(-1);
@@ -72,15 +70,16 @@
         </video>
         <canvas id="output" />
     </div>
-	<div id="menu" style="background-color:pink;padding:30px;"></div>
-   
-        <canvas id="output2" style="background-color:black;padding:50px;"/>
+<div id="loading" class="probootstrap-image probootstrap-animate" style="background-color:black;padding:50px;height:400px;width:35%;"></div>
+<div id="menu" class="probootstrap-image probootstrap-animate" style="background-color:pink;padding:30px;height:400px;width:20%;"></div>
+<canvas class="probootstrap-image probootstrap-animate" id="output2" style="background-color:black;padding:50px;height:400px;width:35%;"/>
     </div>
 <button onclick="startVideo();">Start WebCam</button>
+
     </section>
     <!-- END section -->
     <section class="probootstrap-section-half">
-      <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(img/image_3.jpg)"></div>
+      <div id="box" class="probootstrap-image probootstrap-animate" style="background-color:black;padding:50px;height:900px;width:600px;"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate">
           <h1 class="heading">Move car with hand gestures.</h1>

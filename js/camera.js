@@ -281,6 +281,7 @@ function detectPoseInRealTime(video, net) {
         }
         if (guiState.output.showSkeleton) {
           drawSkeleton(keypoints, minPartConfidence, ctx1, scale);
+	  estimate(keypoints, minPartConfidence, ctx1, scale);
         }
       }
     });
