@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <style>
+     #main2{
+        margin-top:-260px;
+     }
      button {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         background-color: #fff;
@@ -116,12 +119,21 @@
     </section>
     <!-- END section -->
     <section class="probootstrap-section-half">
-      <div id="box" class="probootstrap-image probootstrap-animate" style="background-color:black;padding:50px;height:900px;width:600px;"></div>
+      <div id="box" class="probootstrap-image probootstrap-animate" style="background-color:black;padding:50px;height:600px;width:600px;"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate">
-          <h1 class="heading">Move car with hand gestures.</h1>
-          <p>This supercool project let you play with the css objects with the hand gesture. Yes!! you just turned your computer into a machine that can recognize gestures.</p>
-          <h1>Coming soon!</h1>
+          <h1 class="heading">Tilt your head to change color</h1>
+          <p>This supercool project let you play with the css objects with the head gesture. Tilt your head left or right to change color of this box.</p><button onclick="startVideo2();">Start WebCam</button>
+<div id='main2' style='display:none;'>
+        <video id="video2" playsinline style=" -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        display: none;
+        ">
+        </video>
+        <canvas id="output3" />
+    </div>
         </div>
       </div>
     </section>
@@ -167,6 +179,7 @@
   <script src="js/demo_util.js"></script>
   <script src="js/stats.min.js "></script>
   <script src="js/camera.js"></script>
+  <script src="js/camera2.js"></script>
 
 
   </body>
