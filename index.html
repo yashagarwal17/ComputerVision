@@ -6,7 +6,7 @@
     <title>ComputerVision</title>
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -20,25 +20,25 @@
         background-color: #fff;
         padding: 10px ;
         border-radius: 12px;
-        
+
         position: relative;
         margin: 12px 0 12px;
         align-content: center;
         left: 280px;
       }
-      
+
       button:hover {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         opacity: 0.5;
       }
-	    
+
       .heading1 {
         text-shadow: 3px 2px white;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
         font-weight: bold;
         box-shadow: #fff;
-        
+
 
       }
 
@@ -47,9 +47,9 @@
         padding: 15px;
 
       }
-	    
-	    
-	    
+
+
+
     </style>
 
     <!--[if lt IE 9]>
@@ -61,13 +61,32 @@
   <body>
 
   <!-- START: header -->
-  
+
   <div class="probootstrap-loader"></div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
   <header role="banner" class="probootstrap-header">
     <div class="container">
         <a href="index.html" class="probootstrap-logo" style='style:30px;'>ComputerVision</a>
-        
+
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
 
@@ -77,14 +96,14 @@
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          
+
         </nav>
     </div>
   </header>
   <!-- END: header -->
 
   <div class="probootstrap-main">
-  
+
     <section class="probootstrap-section-half">
       <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(img/image_1.jpg)"></div>
       <div class="probootstrap-text">
@@ -163,24 +182,24 @@
     </div>
   </footer>
 
-  
+
 
   <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
   </div>
-  
+
 
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.2/build/dat.gui.js"></script>
   <script src="https://unpkg.com/@tensorflow/tfjs"></script>
   <script src="https://unpkg.com/@tensorflow-models/posenet"></script>
-    
+
   <script src="js/demo_util.js"></script>
   <script src="js/stats.min.js "></script>
   <script src="js/camera.js"></script>
   <script src="js/camera2.js"></script>
-
+  <script src ="js/modal.js"></script>
 
   </body>
 </html>
