@@ -1091,14 +1091,3 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   outline: none;
   background: rgba(0, 0, 0, 0.9);
 }
-
-.modal{
-   display:none;
-   position: fixed;
-   background: white;
-   padding: 10 px;
-   width:260 px;
-   top: 100 px;
-   left: calc(50%-140px);
-   z-index: 1;
-}
