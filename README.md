@@ -10,6 +10,8 @@ One of the project is based on Tensorflow.js posnet. Enjoy seeing your skeletal 
 
 
 <img src="https://raw.githubusercontent.com/irealva/tfjs-models/master/posenet/demos/camera.gif" alt="cameraDemo" style="width: 600px;"/>
+
+<h6>Tilt Your head</h6>
 Another project that has been added is called 'TILT YOUR HEAD'. Watch the colours change their hues as you tilt your head in front of the screen.
 
 
