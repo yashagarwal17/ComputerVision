@@ -18,3 +18,4 @@ Another project that has been added is called 'TILT YOUR HEAD'. Watch the colour
 <img src="https://media.giphy.com/media/la3211WGwbYYw/giphy.gif" width="500" height= "300"/> <img src="https://media.giphy.com/media/3ohzdU6Sxh3KPzymwE/giphy.gif" width="300" height="300"/>   
 
 <h5>Digit Recognizer</h5>
+<img src="img/digit-recognizer.gif" width="500" height= "300"/>
