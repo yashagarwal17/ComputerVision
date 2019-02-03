@@ -63,7 +63,85 @@
         background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
     height: 80vh;
       }
+.modal1button {
+            background: rgb(0,0,0,0.2);
+            padding: 1em 2em;
+            
+            border: 0;
+         }
 
+         .modal1button:hover {
+             background: rgb(0,0,0,0.2);
+
+         }
+
+         .modal1 {
+             display: block;
+             position: fixed;
+             z-index: 1;
+             left: 0;
+             top: 0;
+             height: 100%;
+             width: 100%;
+             overflow: auto;
+             background-color: rgba(0,0,0,0.2);
+
+
+         }
+
+         .modal1-content {
+             background-color: #f4f4f4;
+             margin: 10% auto;
+             width: 60%;
+             box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+             animation-name: modalopen;
+             animation-duration:2s; 
+         }
+
+         .modal1-header h2 .modal-footer h3{
+             margin: 0
+         }
+
+         .modal1-header{
+             background: #efefef;
+             padding: 15px;
+             color: #fff;
+        }
+
+        .modal1-body{
+            padding: 10px 20px;
+
+        }
+
+        .modal1-footer {
+            background: #efefef;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+
+        }
+
+         .closeBtnmodal1 {
+            
+             float: right;
+             font-size: 30px;
+             
+	     padding:10px;
+
+         }
+
+         .closeBtnmodal1:hover,.closeBtn:focus{
+            
+             text-decoration: none;
+             cursor: pointer;
+
+         }
+
+         @keyframes modalopen{
+             from{opacity: 0}
+             to{opacity: 1}
+
+         }
 
     </style>
 
@@ -107,7 +185,7 @@
   <header role="banner" class="probootstrap-header">
 
     <div class="container">
-      <a href="index.html" class="probootstrap-logo" style='style:30px;'>ComputerVision</a>
+      <a href="index.html" class="probootstrap-logo" style='height:30px;'>ComputerVision</a>
 
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
@@ -144,6 +222,30 @@
         <h1 class="heading" style="color:#fff;">Skeletal</h1>
       </div>
 
+    
+    <div id = "simpleModal1" class = "modal1">
+        <div class = "modal1-content">
+<span class="closeBtnmodal1">&times;</span>
+            <div class="modal1-header">
+                <h2>Skeletal</h2>
+            </div>
+            <div class = "modal1-body">
+            <p><b>Instructions</b></p>
+            <p><i>PoseNet runs with either a single-pose or multi-pose detection algorithm. The single person pose detector is faster and more accurate but requires only one subject present in the image.
+
+The output stride and image scale factor have the largest effects on accuracy/speed. A higher output stride results in lower accuracy but higher speed. A higher image scale factor results in higher accuracy but lower speed.
+
+Add the instruction window giving users the the insructions so that they are in proper lighting and at appropriate distance from the webcam. This should come under the Skeletal section before loading the canvas.</i>
+
+            </p>
+            </div>
+            <div class = "modal1-footer">
+                <h3></h3>
+
+            </div>
+
+        </div>
+    </div>
 
       <div id='main' style='display:none;padding:50px;'>
         <video id="video" playsinline style=" -moz-transform: scaleX(-1);
@@ -162,6 +264,7 @@
   </div>
   <button class="button1" onclick="startVideo();">Start WebCam</button>
   <button class="button1" onclick="stopVideo();">Stop WebCam</button>
+<button id = "modal1Btn" class = "button1 modal1button">Click Here</button>
 
   </section>
  
@@ -246,7 +349,42 @@
   <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
   </div>
+<script>
+     //Get modal element
+     var modal = document.getElementById('simpleModal1');
+     var modalBtn = document.getElementById('modal1Btn');
+     var closeBtn = document.getElementsByClassName('closeBtnmodal1')[0];
+     closeModal();
+     //listen for click
+     modalBtn.addEventListener('click', openModal);
 
+     //listen for close click
+      closeBtn.addEventListener('click', closeModal);
+
+      //Listen for outside click
+      window.addEventListener('click', outsideClick);
+
+
+
+     function openModal(){
+         modal.style.display = 'block';
+     }
+
+     function closeModal(){
+         modal.style.display = 'none';
+     }
+
+     function outsideClick(e){
+         if(e.target==modal){
+             modal.style.display = 'none';
+         }
+     }
+
+
+ 
+ 
+ 
+ </script>   
 
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
