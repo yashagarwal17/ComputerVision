@@ -414,7 +414,34 @@ Add the instruction window giving users the the insructions so that they are in 
          }
      }
  
- 
+     var modal2 = document.getElementById('simpleModal2');
+     var modal2Btn = document.getElementById('modal2Btn');
+     var close2Btn = document.getElementsByClassName('closeBtnmodal2')[0];
+     closeModal2();
+     //listen for click
+     modal2Btn.addEventListener('click', openModal2);
+
+     //listen for close click
+      close2Btn.addEventListener('click', closeModal2);
+
+      //Listen for outside click
+      window.addEventListener('click', outsideClick2);
+
+
+
+     function openModal2(){
+         modal2.style.display = 'block';
+     }
+
+     function closeModal2(){
+         modal2.style.display = 'none';
+     }
+
+     function outsideClick2(e){
+         if(e.target==modal2){
+             modal2.style.display = 'none';
+         }
+     }
  </script>   
 
   <script src="js/scripts.min.js"></script>
