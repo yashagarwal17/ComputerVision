@@ -261,13 +261,39 @@ Add the instruction window giving users the the insructions so that they are in 
   <button id = "modal1Btn" class = "button1 modal1button">Click Here</button>
   </section>
  
-    <section class="probootstrap-section-half">
+   <section class="probootstrap-section-half">
       <div id="box" class="probootstrap-image probootstrap-animate" style="background-color:#57846c;padding:50px;height:600px;width:600px;"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate">
           <h1 class="heading">Tilt your head to change color</h1>
           <p>This supercool project let you play with the css objects with the head gesture. Tilt your head left or right to change color of this box.</p>
-<button class="button1" onclick="startVideo2();">Start WebCam</button><button class="button1">Stop WebCam</button><button class="button1" id="instructions"><a href="instructions.html">Instructions</a></button>
+<div id = "simpleModal2" class = "modal1">
+        <div class = "modal1-content">
+<span class="closeBtnmodal2">&times;</span>
+            <div class="modal1-header">
+                <h2>Tilt Your Head</h2>
+            </div>
+            <div class = "modal1-body">
+            <p><b>Instructions</b></p>
+           <p class="text-modal2">This feature allows you to change the colour of the left adjoined box with just a tilt of your head! Just follow the below given steps and see the magic unfold.</p>
+	<ol class="steps-modal2">
+		<li>Click on the 'START WEBCAM' button, this will turn on your webcam so your head motions can be recogised</li>
+		<li>Tilt your head from one side to another and watch the box change its hues.</i>
+		<li>Click on 'STOP WEBCAM' button to shut off your webcam.</li>
+	</ol>
+  <br><br>
+            </div>
+            <div class = "modal1-footer">
+                <h3></h3>
+
+            </div>
+
+        </div>
+    </div>
+
+<button class="button1" onclick="startVideo2();">Start WebCam</button>
+<button class="button1">Stop WebCam</button>
+<button id = "modal2Btn" class = "button1 modal1button">Click Here</button>
 <div id='main2' style='display:none;'>
         <video id="video2" playsinline style=" -moz-transform: scaleX(-1);
 
